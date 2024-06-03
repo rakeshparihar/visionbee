@@ -1,21 +1,9 @@
-# 📦 Streamlit App Starter Kit 
-```
-⬆️ (Replace above with your app's name)
-```
+# 📦 Vision Bee - Image to Invoice Vision-Based Intelligence
 
-Description of the app ...
+This repository is made to build interactive models. Re-run the project with a click of a button, adjust the hyperparameters in real-time, and see the results immediately (no more waiting for another minute-long training script to go through).
 
-## Demo App
+## Structure
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ml-model-builder-template.streamlit.app/)
-
-## Section Heading
-
-This is filler text, please replace this with text for this section.
-
-## Further Reading
-
-This is filler text, please replace this with a explanatory text about further relevant resources for this repo
-- Resource 1
-- Resource 2
-- Resource 3
+Our project structure will be two-fold:
+1. Jupyter Notebooks - This folder contains all relevant Jupyter Notebooks with various techniques applied (after pulling and merging)
+2. project_name - This folder contains

@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft/2020-12/schema",
+  "title": "Medical Product",
+  "description": "Schema for a medical product with various attributes",
+  "type": "object",
+  "properties": {
+    "Product": {
+      "type": "object",
+      "properties": {
+        "ProductName": {
+          "type": "string",
+          "description": "The name of the product."
+        },
+        "ProductDetails": {
+          "type": "string",
+          "description": "Detailed description of the product."
+        },
+        "Attributes": {
+          "type": "object",
+          "properties": {
+            "BatchNo": {
+              "type": "string",
+              "description": "Batch number of the product."
+            },
+            "ManufacturingDate": {
+              "type": "string",
+              "format": "date",
+              "description": "The date the product was manufactured."
+            },
+            "ExpiryDate": {
+              "type": "string",
+              "format": "date",
+              "description": "The expiry date of the product."
+            },
+            "MRP": {
+              "type": "number",
+              "description": "Maximum Retail Price of the product."
+            },
+            "MRPCurrency": {
+              "type": "string",
+              "description": "Currency type for the MRP."
+            },
+            "Manufacturer": {
+              "type": "object",
+              "properties": {
+                "Name": {
+                  "type": "string"
+                },
+                "Address": {
+                  "type": "string"
+                }
+              },
+              "required": ["Name"]
+            },
+            "MarketedBy": {
+              "type": "object",
+              "properties": {
+                "Name": {
+                  "type": "string"
+                },
+                "Address": {
+                  "type": "string"
+                }
+              }
+            },
+            "Composition": {
+              "type": "string"
+            },
+            "Powders": {
+              "type": "string"
+            },
+            "Color": {
+              "type": "string"
+            },
+            "DirectionsForUse": {
+              "type": "string"
+            },
+            "Storage": {
+              "type": "string"
+            },
+            "RX": {
+              "type": "string"
+            },
+            "Warning": {
+              "type": "string"
+            },
+            "Quantity": {
+              "type": "string"
+            },
+            "Type": {
+              "type": "string",
+              "description": "Type of packaging.",
+              "enum": ["Box", "Tube", "Bottle", "Strip", "Capsule", "Tablet"]
+            }
+          },
+          "required": [
+            "BatchNo", "ManufacturingDate", "ExpiryDate", "MRP", "MRPCurrency",
+            "Manufacturer", "MarketedBy", "Composition", "Powders", "Color", "DirectionsForUse",
+            "Storage", "RX", "Warning", "Quantity", "Type"
+          ]
+        }
+      },
+      "required": ["ProductName", "ProductDetails", "Attributes"]
+    }
+  },
+  "required": ["Product"]
+}
