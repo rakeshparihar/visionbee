@@ -136,3 +136,9 @@ dmypy.json
 
 # vscode settings
 .vscode/
+
+# main.py
+import os
+
+API_KEY = os.getenv("sk-proj-X14XqI1Y5nL3FeMeOIC7T3BlbkFJd2bxoREz9Fc3yqbwBYJF")
+# Your code using the API_KEY

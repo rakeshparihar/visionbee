@@ -1,5 +1,6 @@
 import json
 from dotenv import load_dotenv
+import streamlit as st
 import os
 from urllib.parse import urlparse
 import requests
@@ -10,14 +11,14 @@ import tempfile
 import base64 
 from openai import OpenAI
 
-load_dotenv()
+# load_dotenv()
 
 def load_json_schema(schema_file: str) -> dict:
     with open(schema_file, 'r') as file:
         return json.load(file)
 
 def setup_openai_client():
-    api_key = os.getenv('OPENAI_API_KEY')
+    api_key = st.secrets['OPENAI_API_KEY']
     if not api_key:
         raise ValueError("OPENAI_API_KEY environment variable not set")
     return OpenAI(api_key=api_key)
