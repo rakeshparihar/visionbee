@@ -9,9 +9,9 @@ from io import BytesIO  # Import BytesIO from the io module
 from PIL import Image
 import tempfile
 import base64 
+import streamlit as st
 from openai import OpenAI
 
-# load_dotenv()
 
 def load_json_schema(schema_file: str) -> dict:
     with open(schema_file, 'r') as file:
