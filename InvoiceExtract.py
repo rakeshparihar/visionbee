@@ -10,7 +10,11 @@ import tempfile
 import base64 
 from openai import OpenAI
 
-load_dotenv()
+ef setup_openai_client():
+    api_key = st.secrets['OPENAI_API_KEY']
+    if not api_key:
+        raise ValueError("OPENAI_API_KEY environment variable not set")
+    return OpenAI(api_key=api_key)
 
 def load_json_schema(schema_file: str) -> dict:
     with open(schema_file, 'r') as file:
