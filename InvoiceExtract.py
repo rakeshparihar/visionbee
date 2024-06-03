@@ -8,6 +8,7 @@ from io import BytesIO  # Import BytesIO from the io module
 from PIL import Image
 import tempfile
 import base64 
+import streamlit as st
 from openai import OpenAI
 
 ef setup_openai_client():
